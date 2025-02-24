@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cncf-arc
+  name: cncf-arc-arm64
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "2"
@@ -22,7 +22,7 @@ spec:
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: github-runners
+  name: github-runners-arm64
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "3"
