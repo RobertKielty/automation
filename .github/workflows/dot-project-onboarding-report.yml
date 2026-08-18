@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   onboarding-report:
+    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -53,4 +54,3 @@ jobs:
           git add utilities/dot-project/ONBOARDED.md
           git commit -m "chore: update .project onboarding report [skip ci]"
           git push
-
