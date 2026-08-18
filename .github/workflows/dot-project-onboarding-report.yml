@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   onboarding-report:
-    if: ${{ !github.event.repository.fork }}
+    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
