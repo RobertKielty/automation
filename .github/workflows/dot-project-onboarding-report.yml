@@ -27,7 +27,19 @@ jobs:
         working-directory: utilities/dot-project
         run: go build -o bin/onboarding-report ./cmd/onboarding-report
 
+      - name: Check enterprise token availability
+        id: token_check
+        env:
+          ENTERPRISE_TOKEN: ${{ secrets.ENTERPRISE_TOKEN }}
+        run: |
+          if [ -n "$ENTERPRISE_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Generate onboarding report
+        if: steps.token_check.outputs.available == 'true'
         working-directory: utilities/dot-project
         env:
           GITHUB_TOKEN: ${{ secrets.ENTERPRISE_TOKEN }}
@@ -36,14 +48,19 @@ jobs:
             -enterprise cncf \
             -output ONBOARDED.md
 
+      - name: Skip onboarding report when enterprise token is missing
+        if: steps.token_check.outputs.available == 'false'
+        run: echo "::warning::secrets.ENTERPRISE_TOKEN is not set; skipping onboarding report generation."
+
       - name: Check for changes
         id: diff
+        if: steps.token_check.outputs.available == 'true'
         working-directory: utilities/dot-project
         run: |
           git diff --quiet ONBOARDED.md && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push
-        if: steps.diff.outputs.changed == 'true'
+        if: steps.token_check.outputs.available == 'true' && steps.diff.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -53,4 +70,3 @@ jobs:
           git add utilities/dot-project/ONBOARDED.md
           git commit -m "chore: update .project onboarding report [skip ci]"
           git push
-
