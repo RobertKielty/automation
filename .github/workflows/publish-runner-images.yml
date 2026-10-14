@@ -27,7 +27,9 @@ env:
   REGISTRY: ghcr.io
   # PR builds (approved fork code) go to a separate package so their mutable
   # scratch tags never land in the production image.
-  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && 'cncf/external-gha-runner-pr' || 'cncf/external-gha-runner' }}
+  # DO NOT MERGE: ${{ github.repository }}-pr used in place of cncf/external-gha-runner-pr
+  # for fork dry-run testing only, since GITHUB_TOKEN can't push into the cncf/ namespace.
+  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && format('{0}-pr', github.repository) || 'cncf/external-gha-runner' }}
 
 jobs:
   # Fork PRs run with secrets under pull_request_target, so require a manual
