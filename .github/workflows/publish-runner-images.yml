@@ -29,7 +29,11 @@ env:
   # scratch tags never land in the production image.
   # DO NOT MERGE: ${{ github.repository }}-pr used in place of cncf/external-gha-runner-pr
   # for fork dry-run testing only, since GITHUB_TOKEN can't push into the cncf/ namespace.
-  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && format('{0}-pr', github.repository) || 'cncf/external-gha-runner' }}
+  # DO NOT MERGE: lowercased fork-owned literal ("robertkielty/automation-pr")
+  # used in place of cncf/external-gha-runner-pr for fork dry-run testing
+  # only, since ghcr.io/Docker image references must be all-lowercase and
+  # GITHUB_TOKEN can't push into the cncf/ namespace from a fork anyway.
+  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && 'robertkielty/automation-pr' || 'cncf/external-gha-runner' }}
 
 jobs:
   # Fork PRs run with secrets under pull_request_target, so require a manual
