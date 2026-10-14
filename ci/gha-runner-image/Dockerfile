@@ -1,3 +1,4 @@
+# DO NOT MERGE: trivial touch to trigger fork dry-run (issue #742)
 ARG BASE_IMAGE
 
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/runtime-deps:10.0-${BASE_IMAGE} AS build
