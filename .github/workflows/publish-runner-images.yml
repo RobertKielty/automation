@@ -27,8 +27,6 @@ env:
   REGISTRY: ghcr.io
   # PR builds (approved fork code) go to a separate package so their mutable
   # scratch tags never land in the production image.
-  # DO NOT MERGE: ${{ github.repository }}-pr used in place of cncf/external-gha-runner-pr
-  # for fork dry-run testing only, since GITHUB_TOKEN can't push into the cncf/ namespace.
   # DO NOT MERGE: lowercased fork-owned literal ("robertkielty/automation-pr")
   # used in place of cncf/external-gha-runner-pr for fork dry-run testing
   # only, since ghcr.io/Docker image references must be all-lowercase and
