@@ -3,9 +3,9 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "cncf/automation CI generation chain",
-  "documentNamespace": "https://github.com/cncf/automation/tooling-ci/07cf957039e9d5243423733cef646096ac1008a8",
+  "documentNamespace": "https://github.com/cncf/automation/tooling-ci/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
   "creationInfo": {
-    "created": "2026-10-14T00:31:59Z",
+    "created": "2026-10-15T11:24:10Z",
     "creators": [
       "Tool: .github/scripts/generate-tooling-sbom.sh",
       "Tool: Waybill v0.2.0"
@@ -15,7 +15,7 @@
     {
       "SPDXID": "SPDXRef-Package-Tooling-CI",
       "name": "cncf/automation-ci-generation-chain",
-      "versionInfo": "07cf957039e9d5243423733cef646096ac1008a8",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
       "downloadLocation": "https://github.com/cncf/automation.git",
       "filesAnalyzed": false,
       "supplier": "Organization: CNCF",
@@ -28,11 +28,24 @@
     {
       "SPDXID": "SPDXRef----GITHUB-ACTIONS-RUN-KIND-WITH-ARC",
       "name": "Local action ./.github/actions/run-kind-with-arc",
-      "versionInfo": "07cf957039e9d5243423733cef646096ac1008a8",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
       "downloadLocation": "https://github.com/cncf/automation.git",
       "filesAnalyzed": false,
       "supplier": "Organization: CNCF",
-      "homepage": "https://github.com/cncf/automation/blob/07cf957039e9d5243423733cef646096ac1008a8/.github/actions/run-kind-with-arc",
+      "homepage": "https://github.com/cncf/automation/blob/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6/.github/actions/run-kind-with-arc",
+      "primaryPackagePurpose": "SOURCE",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "SPDXID": "SPDXRef----GITHUB-ACTIONS-RUN-KIND-WITH-CONTAINER-RUNNER",
+      "name": "Local action ./.github/actions/run-kind-with-container-runner",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
+      "downloadLocation": "https://github.com/cncf/automation.git",
+      "filesAnalyzed": false,
+      "supplier": "Organization: CNCF",
+      "homepage": "https://github.com/cncf/automation/blob/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6/.github/actions/run-kind-with-container-runner",
       "primaryPackagePurpose": "SOURCE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -41,11 +54,11 @@
     {
       "SPDXID": "SPDXRef----GITHUB-ACTIONS-SETUP-OCI-CLI",
       "name": "Local action ./.github/actions/setup-oci-cli",
-      "versionInfo": "07cf957039e9d5243423733cef646096ac1008a8",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
       "downloadLocation": "https://github.com/cncf/automation.git",
       "filesAnalyzed": false,
       "supplier": "Organization: CNCF",
-      "homepage": "https://github.com/cncf/automation/blob/07cf957039e9d5243423733cef646096ac1008a8/.github/actions/setup-oci-cli",
+      "homepage": "https://github.com/cncf/automation/blob/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6/.github/actions/setup-oci-cli",
       "primaryPackagePurpose": "SOURCE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -78,9 +91,9 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "SPDXID": "SPDXRef-ACTIONS-DOWNLOAD-ARTIFACT-3E5F45B2CFB9172054B4087A40E8E0B5A5461E7C",
+      "SPDXID": "SPDXRef-ACTIONS-DOWNLOAD-ARTIFACT-9000827CCBA6BDAB643E8B6FD33AC0654AEF8333",
       "name": "GitHub Action actions/download-artifact",
-      "versionInfo": "3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+      "versionInfo": "9000827ccba6bdab643e8b6fd33ac0654aef8333",
       "downloadLocation": "https://github.com/actions/download-artifact",
       "filesAnalyzed": false,
       "supplier": "Organization: GitHub",
@@ -130,9 +143,9 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "SPDXID": "SPDXRef-ACTIONS-UPLOAD-ARTIFACT-043FB46D1A93C77AAE656E7C1C64A875D1FC6A0A",
+      "SPDXID": "SPDXRef-ACTIONS-UPLOAD-ARTIFACT-CF430E030DDBB5B0ABF93D22962F4752F3646CD9",
       "name": "GitHub Action actions/upload-artifact",
-      "versionInfo": "043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+      "versionInfo": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
       "downloadLocation": "https://github.com/actions/upload-artifact",
       "filesAnalyzed": false,
       "supplier": "Organization: GitHub",
@@ -301,11 +314,11 @@
     {
       "SPDXID": "SPDXRef-Package-ToolingWorkflow",
       "name": "Local workflow .github/workflows/generate-tooling-sbom.yml",
-      "versionInfo": "07cf957039e9d5243423733cef646096ac1008a8",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
       "downloadLocation": "https://github.com/cncf/automation.git",
       "filesAnalyzed": false,
       "supplier": "Organization: CNCF",
-      "homepage": "https://github.com/cncf/automation/blob/07cf957039e9d5243423733cef646096ac1008a8/.github/workflows/generate-tooling-sbom.yml",
+      "homepage": "https://github.com/cncf/automation/blob/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6/.github/workflows/generate-tooling-sbom.yml",
       "primaryPackagePurpose": "SOURCE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -314,11 +327,11 @@
     {
       "SPDXID": "SPDXRef-Package-ToolingScript",
       "name": "Local script .github/scripts/generate-tooling-sbom.sh",
-      "versionInfo": "07cf957039e9d5243423733cef646096ac1008a8",
+      "versionInfo": "f5e3b4d076ae0bb14329cc9a38ae97281baa77d6",
       "downloadLocation": "https://github.com/cncf/automation.git",
       "filesAnalyzed": false,
       "supplier": "Organization: CNCF",
-      "homepage": "https://github.com/cncf/automation/blob/07cf957039e9d5243423733cef646096ac1008a8/.github/scripts/generate-tooling-sbom.sh",
+      "homepage": "https://github.com/cncf/automation/blob/f5e3b4d076ae0bb14329cc9a38ae97281baa77d6/.github/scripts/generate-tooling-sbom.sh",
       "primaryPackagePurpose": "SOURCE",
       "licenseConcluded": "NOASSERTION",
       "licenseDeclared": "NOASSERTION",
@@ -365,6 +378,11 @@
     {
       "spdxElementId": "SPDXRef-Package-Tooling-CI",
       "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "SPDXRef----GITHUB-ACTIONS-RUN-KIND-WITH-CONTAINER-RUNNER"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-Tooling-CI",
+      "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "SPDXRef----GITHUB-ACTIONS-SETUP-OCI-CLI"
     },
     {
@@ -380,7 +398,7 @@
     {
       "spdxElementId": "SPDXRef-Package-Tooling-CI",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-ACTIONS-DOWNLOAD-ARTIFACT-3E5F45B2CFB9172054B4087A40E8E0B5A5461E7C"
+      "relatedSpdxElement": "SPDXRef-ACTIONS-DOWNLOAD-ARTIFACT-9000827CCBA6BDAB643E8B6FD33AC0654AEF8333"
     },
     {
       "spdxElementId": "SPDXRef-Package-Tooling-CI",
@@ -400,7 +418,7 @@
     {
       "spdxElementId": "SPDXRef-Package-Tooling-CI",
       "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "SPDXRef-ACTIONS-UPLOAD-ARTIFACT-043FB46D1A93C77AAE656E7C1C64A875D1FC6A0A"
+      "relatedSpdxElement": "SPDXRef-ACTIONS-UPLOAD-ARTIFACT-CF430E030DDBB5B0ABF93D22962F4752F3646CD9"
     },
     {
       "spdxElementId": "SPDXRef-Package-Tooling-CI",
