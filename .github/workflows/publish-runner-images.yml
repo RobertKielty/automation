@@ -27,14 +27,14 @@ env:
   REGISTRY: ghcr.io
   # PR builds (approved fork code) go to a separate package so their mutable
   # scratch tags never land in the production image.
-  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && 'cncf/external-gha-runner-pr' || 'cncf/external-gha-runner' }}
+  IMAGE_NAME: ${{ github.event_name == 'pull_request_target' && 'robertkielty/automation-pr' || 'cncf/external-gha-runner' }}  # DO NOT MERGE: lowercased fork-owned literal for dry-run testing only
 
 jobs:
   # Fork PRs run with secrets under pull_request_target, so require a manual
   # review via the protected environment before anything else runs. Same-repo
   # PRs, pushes and dispatches pass through the unprotected environment.
   authorize:
-    if: github.repository == 'cncf/automation'
+    if: true  # DO NOT MERGE: repo guard relaxed for fork dry-run testing only
     environment: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name != github.repository && 'runner-images-tests-fork' || 'runner-images-tests' }}
     runs-on: ubuntu-latest
     steps:
